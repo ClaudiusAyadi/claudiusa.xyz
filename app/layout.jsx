@@ -1,4 +1,5 @@
 import { ClerkProvider } from '@clerk/nextjs';
+import { ThemeModeScript } from 'flowbite-react';
 import { ThemeProvider } from 'next-themes';
 import { Geist, Geist_Mono } from 'next/font/google';
 import Header from './components/Header';
@@ -22,7 +23,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
 	return (
 		<ClerkProvider>
-			<html lang='en'>
+			<html lang='en' suppressHydrationWarning={true}>
+				<head>
+					<ThemeModeScript />
+				</head>
+
 				<body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
 					<ThemeProvider>
 						<Header />

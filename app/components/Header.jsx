@@ -9,21 +9,6 @@ import { useEffect, useState } from 'react';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { FaMoon, FaSun } from 'react-icons/fa';
 
-const links = [
-	{
-		url: '/',
-		label: 'Home'
-	},
-	{
-		url: '/about',
-		label: 'About'
-	},
-	{
-		url: '/projects',
-		label: 'Projects'
-	}
-];
-
 export default function Header() {
 	const path = usePathname();
 	const { theme, setTheme } = useTheme();
